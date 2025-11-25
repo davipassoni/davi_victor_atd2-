@@ -28,7 +28,9 @@ export default function App() {
             <div>
               <h2 className={styles.title}>Sobre mim</h2>
               <p className={styles.paragraph}>
-                Olá! Eu sou o criador deste site, gosto de batata.
+                Olá! Eu sou o criador deste site, gosto de batata. Além disso, curto bastante tecnologia,
+                programação e passar horas mexendo em personalização de desktop. Esse projeto aqui é um
+                espacinho simples pra compartilhar conhecimento.
               </p>
             </div>
           </div>
@@ -41,6 +43,11 @@ export default function App() {
             destinado ao povo judeu. Desde sua formação, o país se tornou um ponto central de debates
             políticos e disputas territoriais na região.
           </TextBlock>
+          <TextBlock>
+            Antes da criação do Estado moderno, a região já era marcada por grande diversidade cultural e
+            religiosa. O movimento sionista, iniciado no final do século XIX, buscava estabelecer um lar
+            nacional para o povo judeu, especialmente após longos períodos de perseguição.
+          </TextBlock>
         </Section>
 
         <Section id="s3" title="História da Palestina">
@@ -50,6 +57,11 @@ export default function App() {
             longo dos séculos. Atualmente, é reconhecida por muitos países como um Estado, embora ainda
             enfrente conflitos territoriais e desafios diplomáticos.
           </TextBlock>
+          <TextBlock>
+            Durante séculos, comunidades árabes palestinas viveram na região, desenvolvendo cultura,
+            agricultura e vida social próprias. No século XX, mudanças políticas intensificaram tensões,
+            especialmente após o colapso do Império Otomano e a intervenção de potências estrangeiras.
+          </TextBlock>
         </Section>
 
         <Section id="s4" title="História da Guerra">
@@ -58,12 +70,21 @@ export default function App() {
             A guerra envolve questões políticas, culturais, religiosas e territoriais profundas. É um
             conflito complexo, com impactos que ultrapassam fronteiras.
           </TextBlock>
+          <TextBlock>
+            Diversos eventos ao longo das décadas aumentaram a tensão, como guerras regionais,
+            deslocamentos populacionais e disputas por reconhecimento internacional. O conflito continua
+            sendo um dos temas mais sensíveis e discutidos no cenário global.
+          </TextBlock>
         </Section>
 
         <Section id="s5" title="Opiniões Públicas">
           <TextBlock>
             Eu não tenho uma opinião definitiva sobre essa guerra, mas acredito que ambos os lados têm
             responsabilidades e erros. No fim, quem mais sofre são as pessoas comuns.
+          </TextBlock>
+          <TextBlock>
+            É importante sempre buscar fontes diversas e tentar compreender as perspectivas históricas e
+            sociais de cada povo. Conflitos assim nunca são preto no branco.
           </TextBlock>
         </Section>
 
@@ -97,7 +118,7 @@ function Section({ id, title, children }) {
   )
 }
 
-function ImageBlock({ src, alt }) {
+function ImageBlock({ src, alt }) {  
   return <img src={src} className={styles.sectionImg} alt={alt} />
 }
 
