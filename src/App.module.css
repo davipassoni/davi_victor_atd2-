@@ -12,8 +12,8 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(160deg, #0b0f26, #02040b 60%, #00121a);
-  color: #e8faff;
+  background: linear-gradient(160deg, #0e0b24, #150d3b 55%, #1f144d);
+  color: #f3eaff;
   overflow-x: hidden;
 }
 
@@ -26,11 +26,11 @@ html, body {
   justify-content: center;
   gap: 50px;
   padding: 25px 0;
-  background: rgba(0, 60, 120, 0.35);
-  border-bottom: 2px solid rgba(0, 240, 255, 0.4);
-  backdrop-filter: blur(25px) saturate(180%);
-  -webkit-backdrop-filter: blur(25px) saturate(180%);
-  box-shadow: 0 0 45px rgba(0, 240, 255, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.55);
   z-index: 9999;
   animation: menuSlide 1.2s ease forwards;
 }
@@ -41,7 +41,7 @@ html, body {
 }
 
 .menu a {
-  color: #7ff7ff;
+  color: #e6d8ff;
   font-size: 1.25rem;
   font-weight: 700;
   text-decoration: none;
@@ -52,7 +52,7 @@ html, body {
 .menu a:hover {
   color: #fff;
   transform: translateY(-4px) scale(1.18);
-  text-shadow: 0 0 20px #aefbff, 0 0 40px #8dfbff;
+  text-shadow: 0 0 20px rgba(216, 191, 255, 0.7);
 }
 
 main {
@@ -75,16 +75,16 @@ main {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 70px;
-  color: #c3f9ff;
+  color: #f7f0ff;
   font-weight: 800;
-  text-shadow: 0 0 40px rgba(180, 255, 255, 0.8);
+  text-shadow: 0 0 45px rgba(200, 170, 255, 0.5);
   animation: glowPulse 3.5s ease-in-out infinite;
 }
 
 @keyframes glowPulse {
-  0% { text-shadow: 0 0 20px rgba(120,240,255,0.45); }
-  50% { text-shadow: 0 0 55px rgba(220,255,255,1); }
-  100% { text-shadow: 0 0 20px rgba(120,240,255,0.45); }
+  0% { text-shadow: 0 0 20px rgba(200,170,255,0.25); }
+  50% { text-shadow: 0 0 60px rgba(200,170,255,0.85); }
+  100% { text-shadow: 0 0 20px rgba(200,170,255,0.25); }
 }
 
 .card {
@@ -92,12 +92,12 @@ main {
   display: flex;
   align-items: center;
   gap: 55px;
-  background: rgba(0, 80, 150, 0.28);
+  background: rgba(255, 255, 255, 0.06);
   padding: 60px;
   border-radius: 40px;
-  border: 2px solid rgba(0, 230, 255, 0.45);
-  backdrop-filter: blur(25px) saturate(160%);
-  box-shadow: 0 0 55px rgba(0, 230, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.55);
   transition: 0.35s ease;
   animation: softFloat 4.5s ease-in-out infinite;
 }
@@ -110,17 +110,17 @@ main {
 
 .card:hover {
   transform: translateY(-7px) scale(1.05);
-  box-shadow: 0 0 80px rgba(0, 255, 255, 0.75);
-  border-color: #e6ffff;
+  box-shadow: 0 0 90px rgba(200, 170, 255, 0.35);
+  border-color: #fff;
 }
 
 .imgPerfil {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  border: 7px solid #7ff7ff;
-  box-shadow: 0 0 45px rgba(120, 250, 255, 0.9);
+  border: 6px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 50px rgba(210, 180, 255, 0.5);
   transition: 0.35s ease;
   animation: floatCreator 6s ease-in-out infinite;
 }
@@ -132,24 +132,24 @@ main {
 }
 
 .imgPerfil:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 70px rgba(180, 255, 255, 1);
+  transform: scale(1.1);
+  box-shadow: 0 0 80px rgba(230, 210, 255, 0.8);
 }
 
 .sectionImg {
   width: 100%;
-  max-width: 1000px;
-  border-radius: 30px;
+  max-width: 800px;
+  border-radius: 25px;
   margin: 45px auto;
   display: block;
   animation: floatImage 6s ease-in-out infinite;
   transition: 0.45s ease;
-  box-shadow: 0 0 40px rgba(0, 200, 255, 0.45);
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.6);
 }
 
 .sectionImg:hover {
-  transform: scale(1.09);
-  filter: brightness(1.22);
+  transform: scale(1.05);
+  filter: brightness(1.12);
 }
 
 @keyframes floatImage {
@@ -162,20 +162,20 @@ main {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 14px;
-  color: #e7faff;
-  text-shadow: 0 0 20px rgba(180, 255, 255, 0.7);
+  color: #ffffff;
+  text-shadow: 0 0 25px rgba(210, 180, 255, 0.55);
 }
 
 .paragraph {
   font-size: 1.55rem;
-  color: #d6f8ff;
+  color: #ded2ff;
   line-height: 2.4rem;
 }
 
 .textBlock {
   font-size: 1.55rem;
   text-align: center;
-  color: #d6f8ff;
+  color: #efe4ff;
   max-width: 1100px;
   margin: 0 auto;
   line-height: 2.5rem;
@@ -184,4 +184,96 @@ main {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 850px) {
+  .menu {
+    gap: 25px;
+    padding: 18px 0;
+  }
+
+  .menu a {
+    font-size: 1.05rem;
+  }
+
+  .section {
+    padding: 20px;
+    margin-bottom: 120px;
+  }
+
+  .sectionTitle {
+    font-size: 2.6rem;
+    margin-bottom: 45px;
+  }
+
+  .card {
+    flex-direction: column;
+    padding: 35px;
+    gap: 35px;
+  }
+
+  .imgPerfil {
+    width: 220px;
+    height: 220px;
+  }
+
+  .title {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  .paragraph {
+    font-size: 1.25rem;
+    line-height: 1.9rem;
+    text-align: center;
+  }
+
+  .textBlock {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .sectionImg {
+    max-width: 90%;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .menu a {
+    font-size: 0.95rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.1rem;
+  }
+
+  .card {
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .imgPerfil {
+    width: 180px;
+    height: 180px;
+  }
+
+  .title {
+    font-size: 1.9rem;
+  }
+
+  .paragraph,
+  .textBlock {
+    font-size: 1.15rem;
+    line-height: 1.8rem;
+  }
+
+  .sectionImg {
+    max-width: 95%;
+  }
 }

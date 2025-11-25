@@ -17,83 +17,90 @@ export default function App() {
       </nav>
 
       <main>
-        
-        <section className={styles.section} id="s1">
-          <h1 className={styles.sectionTitle}>Criador</h1>
+
+        <Section id="s1" title="Criador">
           <div className={styles.card}>
-            <img className={styles.imgPerfil} src={fotoPerfil} alt="Criador" />
+            <img
+              className={styles.imgPerfil}
+              src={fotoPerfil}
+              alt="Foto do criador do site"
+            />
             <div>
               <h2 className={styles.title}>Sobre mim</h2>
               <p className={styles.paragraph}>
-                Olá! Eu sou o criador deste site. Curto tecnologia, programação e estudo bastante
-                sobre história e geopolítica. Criei este projeto para apresentar conteúdos históricos
-                de um jeito mais claro, bonito e fácil de navegar.
+                Olá! Eu sou o criador deste site, gosto de batata.
               </p>
             </div>
           </div>
-        </section>
+        </Section>
 
-        
-        <section className={styles.section} id="s2">
-          <h1 className={styles.sectionTitle}>História de Israel</h1>
-          <img src={imgIsrael} className={styles.sectionImg} alt="Israel" />
-          <p className={styles.textBlock}>
+        <Section id="s2" title="História de Israel">
+          <ImageBlock src={imgIsrael} alt="Imagem de Israel" />
+          <TextBlock>
             Israel foi criado em 1948, logo após os eventos da Segunda Guerra Mundial, como um Estado
             destinado ao povo judeu. Desde sua formação, o país se tornou um ponto central de debates
             políticos e disputas territoriais na região.
-          </p>
-        </section>
+          </TextBlock>
+        </Section>
 
-        
-        <section className={styles.section} id="s3">
-          <h1 className={styles.sectionTitle}>História da Palestina</h1>
-          <img src={imgPalestina} className={styles.sectionImg} alt="Palestina" />
-          <p className={styles.textBlock}>
+        <Section id="s3" title="História da Palestina">
+          <ImageBlock src={imgPalestina} alt="Imagem da Palestina" />
+          <TextBlock>
             A Palestina possui uma história muito antiga, marcada pela presença de diversos povos ao
             longo dos séculos. Atualmente, é reconhecida por muitos países como um Estado, embora ainda
             enfrente conflitos territoriais e desafios diplomáticos.
-          </p>
-        </section>
+          </TextBlock>
+        </Section>
 
-        
-        <section className={styles.section} id="s4">
-          <h1 className={styles.sectionTitle}>História da Guerra</h1>
-          <img src={imgGuerra} className={styles.sectionImg} alt="Guerra" />
-          <p className={styles.textBlock}>
+        <Section id="s4" title="História da Guerra">
+          <ImageBlock src={imgGuerra} alt="Imagem da guerra" />
+          <TextBlock>
             A guerra envolve questões políticas, culturais, religiosas e territoriais profundas. É um
-            conflito complexo, com impactos que ultrapassam fronteiras e influenciam debates no mundo
-            inteiro.
-          </p>
-        </section>
+            conflito complexo, com impactos que ultrapassam fronteiras.
+          </TextBlock>
+        </Section>
 
-        
-        <section className={styles.section} id="s5">
-          <h1 className={styles.sectionTitle}>Opiniões Públicas</h1>
-          <p className={styles.textBlock}>
+        <Section id="s5" title="Opiniões Públicas">
+          <TextBlock>
             Eu não tenho uma opinião definitiva sobre essa guerra, mas acredito que ambos os lados têm
-            responsabilidades e erros. No fim, quem mais sofre são as pessoas comuns, e qualquer
-            conflito prolongado acaba criando ainda mais dor.
-          </p>
-        </section>
+            responsabilidades e erros. No fim, quem mais sofre são as pessoas comuns.
+          </TextBlock>
+        </Section>
 
-        
-        <section className={styles.section} id="s6">
-          <h1 className={styles.sectionTitle}>Vídeo Explicativo</h1>
-          <p className={styles.textBlock}>Aqui está um vídeo simples explicando melhor o conflito:</p>
+        <Section id="s6" title="Vídeo Explicativo">
+          <TextBlock>Um vídeo simples explicando melhor o conflito:</TextBlock>
 
           <div className={styles.videoWrapper}>
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/_TBmvegNu-I?si=znLHskBElTySLItP"
-              title="Explicação da guerra"
+              src="https://www.youtube.com/embed/_TBmvegNu-I"
+              title="Vídeo explicando o conflito"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </div>
-        </section>
+        </Section>
+
       </main>
     </>
   )
+}
+
+function Section({ id, title, children }) {
+  return (
+    <section id={id} className={styles.section}>
+      <h1 className={styles.sectionTitle}>{title}</h1>
+      {children}
+    </section>
+  )
+}
+
+function ImageBlock({ src, alt }) {
+  return <img src={src} className={styles.sectionImg} alt={alt} />
+}
+
+function TextBlock({ children }) {
+  return <p className={styles.textBlock}>{children}</p>
 }
